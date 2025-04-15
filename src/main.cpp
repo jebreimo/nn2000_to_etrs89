@@ -143,7 +143,7 @@ void convert_elevations(GridLib::Grid& grid,
             throw std::runtime_error("Invalid input format on line " + std::to_string(line_no));
 
         auto grid_pos = model_pos_to_grid_pos(grid.view(), {lon, lat, 0});
-        double ellipsoid_elevation = elevation - get_elevation(grid.view(), grid_pos);
+        double ellipsoid_elevation = elevation + get_elevation(grid.view(), grid_pos);
 
         // The ellipsoid elevation is NaN when there are no data available.
         if (std::isnan(ellipsoid_elevation))
