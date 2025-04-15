@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "vcpkg",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/cmake-build",
+      "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "vcpkg",
+      "configurePreset": "vcpkg",
+      "displayName": "Build vcpkg",
+      "description": "Build vcpkg Configurations"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "vcpkg",
+      "configurePreset": "vcpkg"
+    }
+  ]
+}

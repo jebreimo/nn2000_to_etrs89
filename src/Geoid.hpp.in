@@ -1,0 +1,11 @@
+//****************************************************************************
+// Copyright © 2025 Jan Erik Breimo. All rights reserved.
+// Created by Jan Erik Breimo on 2025-04-15.
+//
+// This file is distributed under the MIT License.
+// License text is included with the source distribution.
+//****************************************************************************
+#pragma once
+
+const char GEOID_TIFF[] =  #embed "../data/no_kv_HREF2018B_NN2000_EUREF89.tif";
+const size_t GEOID_TIFF_SIZE = sizeof(GEOID_TIFF) - 1;
