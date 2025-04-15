@@ -1,6 +1,5 @@
-cmake_minimum_required(VERSION 3.30)
-project(nn2000_to_wgs84
-)
+cmake_minimum_required(VERSION 3.25)
+project(nn2000_to_etrs89)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -20,12 +19,11 @@ list(APPEND CMAKE_MODULE_PATH ${cppembed_SOURCE_DIR}/cmake)
 
 include(TargetEmbedCppData)
 
-add_executable(nn2000_to_wgs84
+add_executable(nn2000_to_etrs89
     src/main.cpp
 )
 
-target_link_libraries(nn2000_to_wgs84
-
+target_link_libraries(nn2000_to_etrs89
     PRIVATE
         Argos::Argos
         GridLib::GridLib
@@ -36,8 +34,7 @@ target_include_directories(Yimage
         ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-target_embed_cpp_data(nn2000_to_wgs84
-
+target_embed_cpp_data(nn2000_to_etrs89
     FILES
         src/Geoid.hpp.in
 )

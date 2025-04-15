@@ -4,8 +4,11 @@
     {
       "name": "vcpkg",
       "generator": "Ninja",
-      "binaryDir": "${sourceDir}/cmake-build",
-      "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+      "binaryDir": "${sourceDir}/cmake-build-vcpkg",
+      "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
     }
   ],
   "buildPresets": [
